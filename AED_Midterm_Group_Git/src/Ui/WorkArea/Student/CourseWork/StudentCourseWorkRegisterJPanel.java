@@ -57,8 +57,6 @@ public class StudentCourseWorkRegisterJPanel extends javax.swing.JPanel {
         btnSave = new javax.swing.JButton();
         btnBack = new javax.swing.JButton();
 
-        txtProgram.setEnabled(false);
-
         lblCourse1.setText("Course 1");
 
         ComCourse1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Application Modeling and Design", "Data Science Engineering Methods and Tools", "Web Design and User Experience Engineering", "Neural Modeling Methods and Tools","Program Structure and Algorithms","Business Analysis and Information Engineering","Web Development Tools and Methods","Software Quality Control and Management" }));
@@ -67,8 +65,6 @@ public class StudentCourseWorkRegisterJPanel extends javax.swing.JPanel {
                 ComCourse1ActionPerformed(evt);
             }
         });
-
-        txtTotalCredits.setEnabled(false);
 
         ComCourse2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] {"Application Modeling and Design", "Data Science Engineering Methods and Tools", "Web Design and User Experience Engineering", "Neural Modeling Methods and Tools","Program Structure and Algorithms","Business Analysis and Information Engineering","Web Development Tools and Methods","Software Quality Control and Management"}));
         ComCourse2.addActionListener(new java.awt.event.ActionListener() {
@@ -80,8 +76,6 @@ public class StudentCourseWorkRegisterJPanel extends javax.swing.JPanel {
         lblTotalCredits.setText("Total Credits");
 
         lblCourse2.setText("Course 2");
-
-        txtTotalCourseCredits.setEnabled(false);
 
         lblSemester.setText("Semester");
 
@@ -95,8 +89,6 @@ public class StudentCourseWorkRegisterJPanel extends javax.swing.JPanel {
         });
 
         lblTotalCost.setText("Total Cost");
-
-        txtTotalCost.setEnabled(false);
 
         lblProgram.setText("Program");
 

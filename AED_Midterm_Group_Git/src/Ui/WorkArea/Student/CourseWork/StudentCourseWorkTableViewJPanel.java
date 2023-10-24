@@ -74,8 +74,6 @@ public class StudentCourseWorkTableViewJPanel extends javax.swing.JPanel {
             }
         });
 
-        txtProgram.setEnabled(false);
-
         lblCourse1.setText("Course 1");
 
         ComCourse1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Application Modeling and Design", "Data Science Engineering Methods and Tools", "Web Design and User Experience Engineering", "Neural Modeling Methods and Tools","Program Structure and Algorithms","Business Analysis and Information Engineering","Web Development Tools and Methods","Software Quality Control and Management" }));

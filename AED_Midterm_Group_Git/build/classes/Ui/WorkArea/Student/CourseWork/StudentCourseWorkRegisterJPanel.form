@@ -141,9 +141,6 @@
   </Layout>
   <SubComponents>
     <Component class="javax.swing.JTextField" name="txtProgram">
-      <Properties>
-        <Property name="enabled" type="boolean" value="false"/>
-      </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="lblCourse1">
       <Properties>
@@ -164,9 +161,6 @@
       </AuxValues>
     </Component>
     <Component class="javax.swing.JTextField" name="txtTotalCredits">
-      <Properties>
-        <Property name="enabled" type="boolean" value="false"/>
-      </Properties>
     </Component>
     <Component class="javax.swing.JComboBox" name="ComCourse2">
       <Properties>
@@ -192,9 +186,6 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtTotalCourseCredits">
-      <Properties>
-        <Property name="enabled" type="boolean" value="false"/>
-      </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="lblSemester">
       <Properties>
@@ -225,9 +216,6 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtTotalCost">
-      <Properties>
-        <Property name="enabled" type="boolean" value="false"/>
-      </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="lblProgram">
       <Properties>

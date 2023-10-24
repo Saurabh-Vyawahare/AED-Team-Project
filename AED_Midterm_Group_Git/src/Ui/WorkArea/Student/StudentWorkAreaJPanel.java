@@ -199,8 +199,11 @@ public class StudentWorkAreaJPanel extends javax.swing.JPanel {
         // aos.setAgenda(businessunit.getRiskManagementAgenda());
         //        CardSequencePanel.add("RiskAgendaObjectives", aos);
         //((java.awt.CardLayout) CardSequencePanel.getLayout()).next(CardSequencePanel);
+       
+        System.out.println("Button clicked.");
         
         StudentCourseWorkRegisterJPanel studentCourseWorkRegPanel = new StudentCourseWorkRegisterJPanel(WorkArea, studentCourseRegList);
+        System.out.println("StudentCourseWorkRegisterJPanel created.");
         WorkArea.add("StudentCourseWorkRegisterJPanel",studentCourseWorkRegPanel);
         CardLayout layout = (CardLayout) WorkArea.getLayout();
         layout.next(WorkArea);
