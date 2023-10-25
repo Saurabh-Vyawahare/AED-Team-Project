@@ -17,10 +17,35 @@ public class StudentRegistration {
     int totalCost;
     String Program;
     int totalCredits;
+    String course1;
+    String course2;
+    String semester;
     
-    private JComboBox<String> jComboBoxSemester;
-    private JComboBox<String> jComboBoxCourse1;
-    private JComboBox<String> jComboBoxCourse2;
+    public String getCourse1() {
+        return course1;
+    }
+
+    public void setCourse1(String course1) {
+        this.course1 = course1;
+    }
+
+    public String getCourse2() {
+        return course2;
+    }
+
+    public void setCourse2(String course2) {
+        this.course2 = course2;
+    }
+
+    public String getSemester() {
+        return semester;
+    }
+
+    public void setSemester(String semester) {
+        this.semester = semester;
+    }
+
+    
 
     public String getName() {
         return studentname;
@@ -62,29 +87,4 @@ public class StudentRegistration {
         this.totalCredits = totalCredits;
     }
 
-    public JComboBox<String> getjComboBoxSemester() {
-        return jComboBoxSemester;
-    }
-
-    public void setjComboBoxSemester(JComboBox<String> jComboBoxSemester) {
-        this.jComboBoxSemester = jComboBoxSemester;
-    }
-
-    public JComboBox<String> getjComboBoxCourse1() {
-        return jComboBoxCourse1;
-    }
-
-    public void setjComboBoxCourse1(JComboBox<String> jComboBoxCourse1) {
-        this.jComboBoxCourse1 = jComboBoxCourse1;
-    }
-
-    public JComboBox<String> getjComboBoxCourse2() {
-        return jComboBoxCourse2;
-    }
-
-    public void setjComboBoxCourse2(JComboBox<String> jComboBoxCourse2) {
-        this.jComboBoxCourse2 = jComboBoxCourse2;
-    }
-    
-    
 }

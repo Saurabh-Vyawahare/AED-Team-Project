@@ -28,11 +28,20 @@ public class StudentCourseRegDirectory {
         this.studentCourseRegList = studentCourseRegList;
     }
     
+    
+    public StudentRegistration addStudentReg(StudentRegistration studentReg){
+    studentCourseRegList.add(studentReg);
+    return studentReg;
+}
+
+    
+    
+    /*
     public StudentRegistration addStudentReg(){
         
-        StudentRegistration StudentRegProfile = new StudentRegistration();
-        studentCourseRegList.add(StudentRegProfile);
-        return StudentRegProfile;
+        StudentRegistration newstudentRegProfile = new StudentRegistration();
+        studentCourseRegList.add(newstudentRegProfile);
+        return newstudentRegProfile;
     }
-    
+    */
 }

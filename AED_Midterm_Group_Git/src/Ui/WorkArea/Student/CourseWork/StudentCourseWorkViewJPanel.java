@@ -12,6 +12,7 @@ import static javax.swing.JOptionPane.WARNING_MESSAGE;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
 import Ui.WorkArea.Student.CourseWork.StudentCourseWorkTableViewJPanel;
+import java.util.Arrays;
 
 /**
  *
@@ -24,28 +25,29 @@ public class StudentCourseWorkViewJPanel extends javax.swing.JPanel {
      */
     
     private JPanel WorkArea;
-    private StudentCourseRegDirectory studentCourseRegList;
+    StudentCourseRegDirectory studentCourseRegList;
 
     public StudentCourseWorkViewJPanel(JPanel WorkArea, StudentCourseRegDirectory studentCourseRegList) {
         
+        initComponents();
         this.studentCourseRegList = studentCourseRegList;
         this.WorkArea = WorkArea;
-        initComponents();
-        
+  
         populateTable();
         
     }
     
     private void populateTable(){
+        
         DefaultTableModel dtm = (DefaultTableModel) tblCourse.getModel();
         dtm.setRowCount(0);
         
         for(StudentRegistration studentReg: studentCourseRegList.getStudentCourseRegList()){
             Object[] row = new Object[4];
             row[0] = studentReg;
-            row[1] = studentReg.getjComboBoxCourse1();
-            row[2] = studentReg.getjComboBoxCourse2();
-            row[3] = studentReg.getjComboBoxSemester();
+            row[1] = studentReg.getCourse1();
+            row[2] = studentReg.getCourse2();
+            row[3] = studentReg.getSemester();
             
             dtm.addRow(row);
         }
@@ -160,18 +162,17 @@ public class StudentCourseWorkViewJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
         
         int selectedRow = tblCourse.getSelectedRow();
-        if (selectedRow < 0) {
-            JOptionPane.showMessageDialog(null, "Please select a row from the table first", "Warning", WARNING_MESSAGE);
-        }
-        
-        else{
-            StudentRegistration studentReg = studentCourseRegList.getStudentCourseRegList().get(selectedRow);
+        if(selectedRow<0){
             
-            StudentCourseWorkTableViewJPanel studentCourseWorkTableViewPanel = new StudentCourseWorkTableViewJPanel(WorkArea, studentReg, studentCourseRegList);
-            WorkArea.add("AdminViewJPanel", studentCourseWorkTableViewPanel);
+            JOptionPane.showMessageDialog(null,"Please select the row from the table first to view details.", "Warning", JOptionPane.WARNING_MESSAGE);
+            
+        }
+        else{
+            StudentRegistration studentReg = (StudentRegistration) tblCourse.getValueAt(selectedRow,0);
+            StudentCourseWorkTableViewJPanel tableViewPanel = new StudentCourseWorkTableViewJPanel(WorkArea, studentReg, studentCourseRegList);
+            WorkArea.add("ViewAccountJPanel", tableViewPanel);
             CardLayout layout = (CardLayout) WorkArea.getLayout();
             layout.next(WorkArea);
-            
         }
     }//GEN-LAST:event_btnViewSemesterActionPerformed
 

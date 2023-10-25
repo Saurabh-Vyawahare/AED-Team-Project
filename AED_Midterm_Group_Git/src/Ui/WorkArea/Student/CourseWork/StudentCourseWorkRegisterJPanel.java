@@ -19,11 +19,13 @@ public class StudentCourseWorkRegisterJPanel extends javax.swing.JPanel {
     /**
      * Creates new form StudentCourseWorkRegisterJPanel
      */
-    private JPanel WorkArea;
+    JPanel WorkArea;
+    
     StudentCourseRegDirectory studentCourseRegList;
 
     public StudentCourseWorkRegisterJPanel(JPanel WorkArea, StudentCourseRegDirectory studentCourseRegList) {
         
+        initComponents();
         this.WorkArea = WorkArea;
         this.studentCourseRegList = studentCourseRegList;
     }
@@ -235,15 +237,22 @@ public class StudentCourseWorkRegisterJPanel extends javax.swing.JPanel {
         String semester = (String) ComSemester.getSelectedItem();
         
         
-        StudentRegistration studentCourseReg = studentCourseRegList.addStudentReg();
+        
+        
+        StudentRegistration studentCourseReg = new StudentRegistration();
+        
         studentCourseReg.setName(name);
         studentCourseReg.setProgram(program);
         studentCourseReg.setTotalCost(totalCost);
         studentCourseReg.setTotalCourseCredits(totalCourseCredits);
         studentCourseReg.setTotalCredits(totalCredits);
-        studentCourseReg.setjComboBoxCourse1(ComCourse1);
-        studentCourseReg.setjComboBoxCourse2(ComCourse2);
-        studentCourseReg.setjComboBoxSemester(ComSemester);
+        studentCourseReg.setCourse1(course1);
+        studentCourseReg.setCourse2(course2);
+        studentCourseReg.setSemester(semester);
+                
+        
+        StudentCourseRegDirectory studentRegDirectory = new StudentCourseRegDirectory();
+        studentRegDirectory.addStudentReg(studentCourseReg);
         
         JOptionPane.showMessageDialog(null,"Course Work Registeration Successfully Completed.");
         

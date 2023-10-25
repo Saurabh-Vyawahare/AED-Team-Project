@@ -158,7 +158,7 @@ public class StudentWorkAreaJPanel extends javax.swing.JPanel {
     private void btnStudentCourseWorkIdentifyResourceAssetsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnStudentCourseWorkIdentifyResourceAssetsActionPerformed
 
         // TODO add your handling code here:
-        StudentCourseWorkViewJPanel studentCourseWorkViewPanel = new StudentCourseWorkViewJPanel(WorkArea, studentCourseRegList);
+        StudentCourseWorkViewJPanel studentCourseWorkViewPanel = new StudentCourseWorkViewJPanel(WorkArea,studentCourseRegList);
         WorkArea.add("StudentCourseWorkViewJPanel",studentCourseWorkViewPanel);
         CardLayout layout = (CardLayout) WorkArea.getLayout();
         layout.next(WorkArea);
@@ -199,11 +199,8 @@ public class StudentWorkAreaJPanel extends javax.swing.JPanel {
         // aos.setAgenda(businessunit.getRiskManagementAgenda());
         //        CardSequencePanel.add("RiskAgendaObjectives", aos);
         //((java.awt.CardLayout) CardSequencePanel.getLayout()).next(CardSequencePanel);
-       
-        System.out.println("Button clicked.");
-        
+               
         StudentCourseWorkRegisterJPanel studentCourseWorkRegPanel = new StudentCourseWorkRegisterJPanel(WorkArea, studentCourseRegList);
-        System.out.println("StudentCourseWorkRegisterJPanel created.");
         WorkArea.add("StudentCourseWorkRegisterJPanel",studentCourseWorkRegPanel);
         CardLayout layout = (CardLayout) WorkArea.getLayout();
         layout.next(WorkArea);
